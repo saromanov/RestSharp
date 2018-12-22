@@ -4,9 +4,9 @@ namespace RestSharp {
     /// Representation of rest request
     /// </summary>
     public class RestRequest: IRestRequest {
-
-        public RestRequest() {
-
+        private string Url { get; private set; }
+        public RestRequest(url string) {
+            Url = url;
         }
     } 
 }
