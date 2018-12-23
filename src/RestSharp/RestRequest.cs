@@ -11,6 +11,7 @@ namespace RestSharp {
         private Dictionary<string, string> parameters;
         private Dictionary<string, string> headers;
         private Dictionary<string, string> files;
+        private List<FileAttribute> uploadedFiles;
         public RestRequest(url string) {
             Url = url;
             parameters = new Dictionary<string, string>();
@@ -44,6 +45,12 @@ namespace RestSharp {
         /// </summary>
         private []byte ReadFile(path string){
             return File.ReadAllBytes(path);
+        }
+
+        private void PrepareFiles() {
+            foreach(KeyValuePair<string, string> entry in files) {
+
+            }
         }
 
     } 
