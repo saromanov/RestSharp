@@ -31,14 +31,14 @@ namespace RestSharp {
         /// Adding of the Header on request
         /// </summary>
         public void AddHeader(string name, string value) {
-            parameters.Add(name, value);
+            headers.Add(name, value);
         }
 
         /// <summary>
         /// Adding of the file path on request
         /// </summary>
         public void AddFile(string name, string value) {
-            parameters.Add(name, value);
+            files.Add(name, value);
         }
 
         /// <summary>
@@ -48,6 +48,9 @@ namespace RestSharp {
             return File.ReadAllBytes(path);
         }
 
+        /// <summary>
+        /// PrepareFiles defines preparation of files for upload
+        /// </summary>
         private void PrepareFiles() {
             foreach(KeyValuePair<string, string> entry in files) {
                 uploadedFiles.Add(
