@@ -9,10 +9,12 @@ namespace RestSharp {
         private string Url { get; private set; }
         private Dictionary<string, string> parameters;
         private Dictionary<string, string> headers;
+        private Dictionary<string, string> files;
         public RestRequest(url string) {
             Url = url;
             parameters = new Dictionary<string, string>();
             headers = new Dictionary<string, string>();
+            files = new Dictionary<string, string>();
         }
 
         /// <summary>
@@ -26,6 +28,13 @@ namespace RestSharp {
         /// Adding of the Header on request
         /// </summary>
         public void AddHeader(string name, string value) {
+            parameters.Add(name, value);
+        }
+
+        /// <summary>
+        /// Adding of the file path on request
+        /// </summary>
+        public void AddFile(string name, string value) {
             parameters.Add(name, value);
         }
 
