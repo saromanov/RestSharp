@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 
 namespace RestSharp {
 
@@ -36,6 +37,13 @@ namespace RestSharp {
         /// </summary>
         public void AddFile(string name, string value) {
             parameters.Add(name, value);
+        }
+
+        /// <summary>
+        /// ReadFile provides reading of the file
+        /// </summary>
+        private []byte ReadFile(path string){
+            return File.ReadAllBytes(path);
         }
 
     } 
