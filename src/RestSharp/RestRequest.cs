@@ -55,13 +55,13 @@ namespace RestSharp {
             foreach(KeyValuePair<string, string> entry in files) {
                 uploadedFiles.Add(
                     new FileAttribute{
-                        Name = entry.Value;
+                        Name = entry.Value,
                         Writer = s => {
                              using (var file = new StreamReader(new FileStream(path, FileMode.Open)))
                             {
                                 file.BaseStream.CopyTo(s);
                             }
-                        }
+                        },
                     }
                 )
             }
