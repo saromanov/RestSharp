@@ -17,6 +17,7 @@ namespace RestSharp {
             parameters = new Dictionary<string, string>();
             headers = new Dictionary<string, string>();
             files = new Dictionary<string, string>();
+            uploadedFiles = new List<FileAttribute>();
         }
 
         /// <summary>
@@ -49,7 +50,17 @@ namespace RestSharp {
 
         private void PrepareFiles() {
             foreach(KeyValuePair<string, string> entry in files) {
-
+                uploadedFiles.Add(
+                    new FileAttribute{
+                        Name = entry.Value;
+                        Writer = s => {
+                             using (var file = new StreamReader(new FileStream(path, FileMode.Open)))
+                            {
+                                file.BaseStream.CopyTo(s);
+                            }
+                        }
+                    }
+                )
             }
         }
 
