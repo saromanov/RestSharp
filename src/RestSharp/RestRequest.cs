@@ -11,6 +11,7 @@ namespace RestSharp {
         private Dictionary<string, string> parameters;
         private Dictionary<string, string> headers;
         private Dictionary<string, string> files;
+        private Dictionary<string, string> urlAttributes;
         private List<FileAttribute> uploadedFiles;
         public RestRequest(url string) {
             Url = url;
@@ -32,6 +33,13 @@ namespace RestSharp {
         /// </summary>
         public void AddHeader(string name, string value) {
             headers.Add(name, value);
+        }
+
+        /// <summary>
+        /// Adding of url attributes like ?key=value
+        /// </summary>
+        public void AddUrlAttribute(string key, string value) {
+            urlAttributes.Add(key, value);
         }
 
         /// <summary>
@@ -65,6 +73,10 @@ namespace RestSharp {
                     }
                 )
             }
+        }
+
+        public void Do(){
+            
         }
 
     } 

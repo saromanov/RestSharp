@@ -11,6 +11,16 @@ namespace RestSharp {
         private List<string> acceptedTypes;
         private Uri url{get; private set; }
 
+        /// <summary>
+        ///  Allowing of redirects
+        /// </summary>
+        public bool FollowRedirects { get; set; }
+
+        /// <summary>
+        /// UserAgent for requeststo use for requests made by this client instance
+        /// </summary>
+        public string UserAgent { get; set; }
+
         private static readonly string[] JsonContentTypes =
         {
             "application/json", "text/json", "text/x-json", "text/javascript", "*+json"
