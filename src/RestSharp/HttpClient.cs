@@ -33,5 +33,8 @@ namespace RestSharp {
         public IRestResponse Do(IRestRequest request) {
             var result = request.Execute();
         }
+
+        public Task<IRestResponse<T>> DoAsync(IRestRequest request) {}
+        
     }
 }
