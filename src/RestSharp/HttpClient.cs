@@ -1,3 +1,6 @@
+using System;
+using System.Net;
+
 namespace RestSharp {
 
     /// <summary>
@@ -6,7 +9,7 @@ namespace RestSharp {
     public class HttpClient {
         private WebRequest webRequest;
         private List<string> acceptedTypes;
-        private string url{get; private set; }
+        private Uri url{get; private set; }
 
         private static readonly string[] JsonContentTypes =
         {
@@ -14,6 +17,12 @@ namespace RestSharp {
         };
 
         public HttpClient(url string){
+            acceptedTypes = new List<string>();
+            url = new Uri(url);
+
+        }
+
+        public HttpClient(Uri url){
             acceptedTypes = new List<string>();
             url = url;
 
@@ -35,6 +44,6 @@ namespace RestSharp {
         }
 
         public Task<IRestResponse<T>> DoAsync(IRestRequest request) {}
-        
+
     }
 }
