@@ -6,14 +6,16 @@ namespace RestSharp {
     public class HttpClient {
         private WebRequest webRequest;
         private List<string> acceptedTypes;
+        private string url{get; private set; }
 
         private static readonly string[] JsonContentTypes =
         {
             "application/json", "text/json", "text/x-json", "text/javascript", "*+json"
         };
 
-        public HttpClient(){
+        public HttpClient(url string){
             acceptedTypes = new List<string>();
+            url = url;
 
         }
 
