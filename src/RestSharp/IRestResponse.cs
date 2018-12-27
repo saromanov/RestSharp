@@ -12,5 +12,15 @@ namespace RestSharp{
         /// MIME content type
         /// </summary>
         string ContentType { get; set; }
+
+        /// <summary>
+        /// Status Description
+        /// </summary>
+        string StatusDescription { get; set; }
+
+        /// <summary>
+        /// Server
+        /// </summary>
+        string Server {get; set; }
     }
 }
