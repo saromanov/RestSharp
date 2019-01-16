@@ -7,7 +7,7 @@ namespace RestSharp {
         /// <summary>
         /// Name is a name of the file
         /// </summary>
-        public string Name { get; set; }
+        [NotNull] public string Name { get; set; }
 
         /// <summary>
         /// ContentType of the file

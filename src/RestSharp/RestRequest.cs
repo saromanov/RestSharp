@@ -13,7 +13,7 @@ namespace RestSharp {
         private Dictionary<string, string> files;
         private Dictionary<string, string> urlAttributes;
         private List<FileAttribute> uploadedFiles;
-        public RestRequest(url string) {
+        public RestRequest(string url) {
             Url = url;
             parameters = new Dictionary<string, string>();
             headers = new Dictionary<string, string>();
@@ -52,7 +52,7 @@ namespace RestSharp {
         /// <summary>
         /// ReadFile provides reading of the file
         /// </summary>
-        private []byte ReadFile(path string){
+        private byte[] ReadFile(string path){
             return File.ReadAllBytes(path);
         }
 
@@ -75,7 +75,7 @@ namespace RestSharp {
             }
         }
 
-        public void Do(){
+        public IRestResponse Do(IRestRequest request){
             
         }
 
