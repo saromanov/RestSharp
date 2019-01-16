@@ -7,14 +7,14 @@ namespace RestSharp {
     /// Representation of rest request
     /// </summary>
     public class RestRequest: IRestRequest {
-        private Methods methods;
+        private Methods method;
         private Dictionary<string, string> parameters;
         private Dictionary<string, string> headers;
         private Dictionary<string, string> files;
         private Dictionary<string, string> urlAttributes;
         private List<FileAttribute> uploadedFiles;
         public RestRequest(Methods method) {
-            methods = methods;
+            method = method;
             parameters = new Dictionary<string, string>();
             headers = new Dictionary<string, string>();
             files = new Dictionary<string, string>();
@@ -76,7 +76,9 @@ namespace RestSharp {
         }
 
         public IRestResponse Do(IRestRequest request){
-            
+            if (this.method == Methods.GET) {
+
+            }
         }
 
     } 
