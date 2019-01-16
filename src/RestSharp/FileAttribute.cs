@@ -18,5 +18,9 @@ namespace RestSharp {
         /// Data of file
         /// </summary>
         public Action<Stream> Writer { get; set; }
+         /// <summary>
+        /// The length of data
+        /// </summary>
+        public long ContentLength { get; set; }
     }
 }
