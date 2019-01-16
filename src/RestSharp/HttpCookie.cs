@@ -19,5 +19,10 @@ namespace RestSharp {
         /// Version of Cookie
         /// </summary>
         public string Version { get; set; }
+
+        /// <summary>
+        /// Check if cookie should be sending as sequre 
+        /// </summary>
+        public bool Secure { get; set; }
     }
 }
