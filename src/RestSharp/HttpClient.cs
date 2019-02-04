@@ -26,7 +26,7 @@ namespace RestSharp {
             "application/json", "text/json", "text/x-json", "text/javascript", "*+json"
         };
 
-        public HttpClient(url string){
+        public HttpClient(string url){
             acceptedTypes = new List<string>();
             url = new Uri(url);
 

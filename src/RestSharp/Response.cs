@@ -8,6 +8,9 @@ namespace RestSharp {
         /// </summary>
         public int StatusCode { get; set; }
 
+        /// <summary>
+        /// Return true if recuest was successful
+        /// </summary>
         public bool Success => StatusCode >= 200 && StatusCode <= 299; 
     }
 
