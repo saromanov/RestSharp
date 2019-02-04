@@ -13,5 +13,13 @@ namespace RestSharp {
         public RestSharp(Uri uri) {
             uri = uri;
         }
+
+        /// <summary>
+        /// Creating of the Post request
+        /// </summary>
+        /// <param name="req">Instance of the RestRequest</param>
+        public Post(RestRequest req) {
+
+        }
     }
 }
