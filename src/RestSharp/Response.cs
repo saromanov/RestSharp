@@ -1,5 +1,17 @@
 namespace RestSharp {
-    public class Response<T> {
+
+
+    public abstract class AbstractResponse {
+
+        /// <summary>
+        ///     HTTP response code
+        /// </summary>
+        public int StatusCode { get; set; }
+
+        public bool Success => StatusCode >= 200 && StatusCode <= 299; 
+    }
+
+    public class Response<T>: AbstractResponse {
          private readonly Func<T> deserializer;
          private readonly T deserializerContent;
     }
