@@ -13,12 +13,17 @@ namespace RestSharp {
         private Dictionary<string, string> files;
         private Dictionary<string, string> urlAttributes;
         private List<FileAttribute> uploadedFiles;
+        private string url;
         public RestRequest(Methods method) {
             method = method;
             parameters = new Dictionary<string, string>();
             headers = new Dictionary<string, string>();
             files = new Dictionary<string, string>();
             uploadedFiles = new List<FileAttribute>();
+        }
+
+        public RestRequest(string url) {
+            url = url;
         }
 
         /// <summary>
