@@ -8,18 +8,14 @@ namespace RestSharp {
     /// </summary>
     public class RestRequest: IRestRequest {
         private Methods method;
-        private Dictionary<string, string> parameters;
-        private Dictionary<string, string> headers;
-        private Dictionary<string, string> files;
-        private Dictionary<string, string> urlAttributes;
-        private List<FileAttribute> uploadedFiles;
+        private Dictionary<string, string> parameters = new Dictionary<string, string>();
+        private Dictionary<string, string> headers = new Dictionary<string, string>();
+        private Dictionary<string, string> files = new Dictionary<string, string>();
+        private Dictionary<string, string> urlAttributes = new Dictionary<string, string>();
+        private List<FileAttribute> uploadedFiles = new List<FileAttribute>();
         private string url;
         public RestRequest(Methods method) {
             method = method;
-            parameters = new Dictionary<string, string>();
-            headers = new Dictionary<string, string>();
-            files = new Dictionary<string, string>();
-            uploadedFiles = new List<FileAttribute>();
         }
 
         public RestRequest(string url) {
