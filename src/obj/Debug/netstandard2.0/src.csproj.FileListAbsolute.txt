@@ -2,3 +2,8 @@
 /home/motorcode/Projects/csharp/RestSharp/src/obj/Debug/netstandard2.0/src.csproj.CoreCompileInputs.cache
 /home/motorcode/Projects/csharp/RestSharp/src/obj/Debug/netstandard2.0/src.AssemblyInfoInputs.cache
 /home/motorcode/Projects/csharp/RestSharp/src/obj/Debug/netstandard2.0/src.AssemblyInfo.cs
+/home/motorcode/Projects/csharp/RestSharp/src/bin/Debug/netstandard2.0/src.deps.json
+/home/motorcode/Projects/csharp/RestSharp/src/bin/Debug/netstandard2.0/src.dll
+/home/motorcode/Projects/csharp/RestSharp/src/bin/Debug/netstandard2.0/src.pdb
+/home/motorcode/Projects/csharp/RestSharp/src/obj/Debug/netstandard2.0/src.dll
+/home/motorcode/Projects/csharp/RestSharp/src/obj/Debug/netstandard2.0/src.pdb
