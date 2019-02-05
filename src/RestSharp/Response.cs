@@ -1,3 +1,6 @@
+using System;
+using System.Net;
+
 namespace RestSharp {
 
 
@@ -17,7 +20,6 @@ namespace RestSharp {
     public class Response<T>: AbstractResponse {
          private readonly Func<T> deserializer;
          private readonly T deserializerContent;
-    }
 
     public T GetContent()
     {
@@ -34,4 +36,5 @@ namespace RestSharp {
     /// Server
     /// </summary>
     public string Server { get; set; }
+    }
 }

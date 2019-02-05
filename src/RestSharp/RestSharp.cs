@@ -18,8 +18,8 @@ namespace RestSharp {
         /// Creating of the Post request
         /// </summary>
         /// <param name="req">Instance of the RestRequest</param>
-        public Post(RestRequest req) {
-
+        public bool Post(RestRequest req) {
+            return true;
         }
     }
 }

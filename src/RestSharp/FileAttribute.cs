@@ -1,4 +1,5 @@
 using System.IO;
+using System;
 
 namespace RestSharp {
 
@@ -7,7 +8,7 @@ namespace RestSharp {
         /// <summary>
         /// Name is a name of the file
         /// </summary>
-        [NotNull] public string Name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// ContentType of the file
