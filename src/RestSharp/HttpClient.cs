@@ -43,7 +43,7 @@ namespace RestSharp {
         /// <summary>
         /// Do provides executing of the request
         /// </summary>
-        public IRestResponse Do(IRestRequest request) {
+        public IRestResponse Do(Methods method, IRestRequest request) {
             var result = request.Execute();
             return null;
         }

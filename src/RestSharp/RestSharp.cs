@@ -21,7 +21,7 @@ namespace RestSharp {
         /// </summary>
         /// <param name="req">Instance of the RestRequest</param>
         public bool Post(RestRequest req) {
-            var response = client.Do(req);
+            var response = client.Do(Methods.POST, req);
             return true;
         }
     }
