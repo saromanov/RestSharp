@@ -6,10 +6,10 @@ namespace RestSharp {
     public class RestSharp {
 
         private Uri uri;
-        private HttpClient client;
+        private HttpClientInner client;
         public RestSharp(string urlString) {
             this.uri = new Uri(urlString);
-            this.client = new HttpClient("");
+            this.client = new HttpClientInner("");
         }
 
         public RestSharp(Uri uri) {

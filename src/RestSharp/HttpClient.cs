@@ -7,7 +7,7 @@ namespace RestSharp {
     /// <summary>
     /// Implementation of HttpClient
     /// </summary>
-    public class HttpClient {
+    public class HttpClientInner {
         
         private WebRequest webRequest;
         private List<string> acceptedTypes;
@@ -28,13 +28,13 @@ namespace RestSharp {
             "application/json", "text/json", "text/x-json", "text/javascript", "*+json"
         };
 
-        public HttpClient(string urlString){
+        public HttpClientInner(string urlString){
             acceptedTypes = new List<string>();
             url = new Uri(urlString);
 
         }
 
-        public HttpClient(Uri url){
+        public HttpClientInner(Uri url){
             acceptedTypes = new List<string>();
             url = url;
 
