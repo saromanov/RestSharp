@@ -23,8 +23,7 @@ namespace RestSharp {
 
     public T GetContent()
     {
-        this.deserializedContent = this.deserializer();
-        return this.deserializerContent;
+        return this.deserializer();
     }
 
     /// <summary>

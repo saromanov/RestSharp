@@ -11,5 +11,7 @@ namespace RestSharp {
         /// Serialization of JSON body
         /// </summary>
         ISerializable JsonSerializer { get; set; }
+
+        AbstractResponse Execute();
     }
 }

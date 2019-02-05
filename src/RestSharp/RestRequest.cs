@@ -41,6 +41,10 @@ namespace RestSharp {
             urlAttributes.Add(key, value);
         }
 
+        public AbstractResponse Execute(){
+            return new Response<string>();
+        }
+
         /// <summary>
         /// Adding of the file path on request
         /// </summary>
@@ -64,7 +68,7 @@ namespace RestSharp {
                     new FileAttribute{
                         Name = entry.Value,
                         Writer = s => {
-                             using (var file = new StreamReader(new FileStream(path, FileMode.Open)))
+                             using (var file = new StreamReader(File.OpenRead(entry.Value)))
                             {
                                 file.BaseStream.CopyTo(s);
                             }
@@ -74,10 +78,8 @@ namespace RestSharp {
             }
         }
 
-        public IRestResponse Do(IRestRequest request){
-            if (this.method == Methods.GET) {
-
-            }
+        public AbstractResponse Do(IRestRequest request){
+            return new Response<string>();
         }
 
     } 

@@ -1,17 +1,17 @@
 using System.Net;
 using System;
-
+using System.Net;
 namespace RestSharp {
 
-    class RestSharp {
+    public class RestSharp {
 
         private Uri uri;
-        public RestSharp(string url) {
-            url = new Uri(url);
+        public RestSharp(string urlString) {
+            this.uri = new Uri(urlString);
         }
 
         public RestSharp(Uri uri) {
-            uri = uri;
+            this.uri = uri;
         }
 
         /// <summary>

@@ -28,9 +28,9 @@ namespace RestSharp {
             "application/json", "text/json", "text/x-json", "text/javascript", "*+json"
         };
 
-        public HttpClient(string url){
+        public HttpClient(string urlString){
             acceptedTypes = new List<string>();
-            url = new Uri(url);
+            url = new Uri(urlString);
 
         }
 
@@ -42,20 +42,15 @@ namespace RestSharp {
 
         /// <summary>
         /// Do provides executing of the request
-        //  with defined type 
-        /// </summary>
-        public T Do<T>(IRestRequest request) {
-            var result = request.Execute();
-        }
-
-        /// <summary>
-        /// Do provides executing of the request
         /// </summary>
         public IRestResponse Do(IRestRequest request) {
             var result = request.Execute();
+            return null;
         }
 
-        public Task<IRestResponse> DoAsync(IRestRequest request) {}
+        public Task<IRestResponse> DoAsync(IRestRequest request) {
+            return null;
+        }
 
     }
 }
