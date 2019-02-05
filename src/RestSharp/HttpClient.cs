@@ -1,5 +1,6 @@
 using System;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 namespace RestSharp {
@@ -45,7 +46,15 @@ namespace RestSharp {
         /// </summary>
         public IRestResponse Do(Methods method, IRestRequest request) {
             var result = request.Execute();
+            var url = this.GetFullUrl(request);
             return null;
+        }
+
+        /// <summary>
+        /// Return full url for request
+        /// </summary>
+        private string GetFullUrl(IRestRequest request) {
+            return this.url + request.GetPath();
         }
 
         public Task<IRestResponse> DoAsync(IRestRequest request) {
