@@ -15,6 +15,8 @@ namespace RestSharp {
         private Dictionary<string, string> urlAttributes = new Dictionary<string, string>();
         private List<FileAttribute> uploadedFiles = new List<FileAttribute>();
         private string url;
+
+        private string jsonBody = "";
         public ISerializable JsonSerializer { get; set; }
         public RestRequest(string url) {
             url = url;
@@ -32,6 +34,13 @@ namespace RestSharp {
         /// </summary>
         public void AddHeader(string name, string value) {
             headers.Add(name, value);
+        }
+
+        /// <summary>
+        /// Add JSON body to request
+        /// </summary>
+        public void AddJsonBody(string body) {
+            this.jsonBody = body;
         }
 
         /// <summary>
