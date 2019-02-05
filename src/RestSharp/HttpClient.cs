@@ -1,15 +1,17 @@
 using System;
 using System.Net;
-
+using System.Threading.Tasks;
+using System.Collections.Generic;
 namespace RestSharp {
 
     /// <summary>
     /// Implementation of HttpClient
     /// </summary>
     public class HttpClient {
+        
         private WebRequest webRequest;
         private List<string> acceptedTypes;
-        private Uri url{get; private set; }
+        private Uri url{get; }
 
         /// <summary>
         ///  Allowing of redirects
@@ -53,7 +55,7 @@ namespace RestSharp {
             var result = request.Execute();
         }
 
-        public Task<IRestResponse<T>> DoAsync(IRestRequest request) {}
+        public Task<IRestResponse> DoAsync(IRestRequest request) {}
 
     }
 }

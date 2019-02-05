@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization;
 
 namespace RestSharp {
 
@@ -14,10 +15,7 @@ namespace RestSharp {
         private Dictionary<string, string> urlAttributes = new Dictionary<string, string>();
         private List<FileAttribute> uploadedFiles = new List<FileAttribute>();
         private string url;
-        public RestRequest(Methods method) {
-            method = method;
-        }
-
+        public ISerializable JsonSerializer { get; set; }
         public RestRequest(string url) {
             url = url;
         }

@@ -6,7 +6,7 @@ namespace RestSharp {
 
     public class Http{
 
-        private List<string> Cookies {get; private set; }
+        private List<string> Cookies {get; }
         protected bool HasCookies => Cookies.Any();
 
         public Http() {
