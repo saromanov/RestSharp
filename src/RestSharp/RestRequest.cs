@@ -50,6 +50,10 @@ namespace RestSharp {
             urlAttributes.Add(key, value);
         }
 
+        public string GetPath() {
+            return this.url;
+        }
+
         public AbstractResponse Execute(){
             return new Response<string>();
         }

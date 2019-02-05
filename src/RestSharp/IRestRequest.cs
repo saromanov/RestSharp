@@ -13,5 +13,10 @@ namespace RestSharp {
         ISerializable JsonSerializer { get; set; }
 
         AbstractResponse Execute();
+
+        /// <summary>
+        /// Return current path of url
+        /// </summary>
+        string GetPath();
     }
 }
