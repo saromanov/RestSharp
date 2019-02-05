@@ -1,5 +1,9 @@
 namespace RestSharp {
-    enum Methods {
-       
+   public enum Methods {
+       None,
+       GET,
+       POST,
+       PATCH,
+       DELETE
     }
 }

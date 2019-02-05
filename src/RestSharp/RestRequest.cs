@@ -18,8 +18,9 @@ namespace RestSharp {
 
         private string jsonBody = "";
         public ISerializable JsonSerializer { get; set; }
-        public RestRequest(string url) {
+        public RestRequest(Methods method, string url) {
             url = url;
+            method = method;
         }
 
         /// <summary>
